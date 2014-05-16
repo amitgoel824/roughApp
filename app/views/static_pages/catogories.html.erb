@@ -1,0 +1,8 @@
+<h1>Choose a Category</h1>
+
+
+ 
+<% @catogories.each do |category| %>
+  <a href="/questions/<%= category.id %>"><%= category.name %></a>
+  <br>
+<% end %>

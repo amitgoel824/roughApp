@@ -1,0 +1,22 @@
+<h1>User <%= @user.id %> </h1>
+
+<h2>High Scores</h2>
+
+
+<table>
+  <tr>
+    <% @categories.each do |x| %>
+      <th> <%= x.name %>   </th>
+    <% end %>
+  </tr>
+ 
+
+  <tr>
+    <td><%= @myscores[0] %></td>
+    <td><%= @myscores[1] %></td>
+    <td><%= @myscores[2] %></td>
+  </tr>
+
+</table>
+
+<%= link_to 'Take a Quiz', static_pages_catogories_path %> 

@@ -1,0 +1,13 @@
+<h1>Listing questions</h1>
+<form action = "/static_pages/score" >
+<% @questions.each do |question| %>
+  
+  <%= question.ques%> <br>
+    <input type="radio" name= "ans" value= 1 ><%= question.opt1 %><br>
+    <input type="radio" name= <%= question.id%> value= 2 ><%= question.opt2 %><br>
+    <input type="radio" name= <%= question.id%> value= 3 ><%= question.opt3 %><br>
+    <hr>
+  
+<% end %>
+<input type="submit" value="Submit">
+</form>

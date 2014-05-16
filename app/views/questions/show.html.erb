@@ -1,0 +1,15 @@
+<h1>Listing questions</h1>
+<form action = "/static_pages/score" method="POST">
+<% @questions.each_with_index do |question, index| %>
+  
+  <%= question.ques%> <br>
+    <input type="radio" name= "ans<%= index + 1%>" value= 1 ><%= question.opt1 %><br>
+    <input type="radio" name= "ans<%= index + 1%>" value= 2 ><%= question.opt2 %><br>
+    <input type="radio" name= "ans<%= index + 1%>" value= 3 ><%= question.opt3 %><br>
+    <input type = "hidden" name="answer<%= index + 1%>" value = "<%= @answers[index] %>" >
+    <hr>
+  
+<% end %>
+<input type = "hidden" name="categoryId" value = "<%= @catId %>" >
+<input type="submit" value="Submit">
+</form>
